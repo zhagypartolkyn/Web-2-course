@@ -1,0 +1,12 @@
+.container2 {
+    background-color:#c592ff ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 36px;
+    background-color: none;
+}
+
+.elem{
+    background-color: none;
+}
