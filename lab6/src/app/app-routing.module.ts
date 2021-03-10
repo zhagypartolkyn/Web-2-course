@@ -1,16 +1,20 @@
-  
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import {ProductItemComponent} from './product-item/product-item.component';
-import {ProductListComponent} from './product-list/product-list.component';
-import {CategoryComponent} from "./category/category.component";
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { AlbumPhotosComponent } from './album-photos/album-photos.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
-  { path: 'products', component: ProductListComponent},
-  // { path: '', component: CategoryComponent},
-  { path: '', component: ProductListComponent},
-  { path: 'category/:id/product-id/:id', component: ProductItemComponent},
-  { path: 'category/:id', component: CategoryComponent}
+  {path: 'Home', component: HomeComponent},
+  {path: 'About', component: AboutComponent},
+  {path: 'Albums', component: AlbumsComponent},
+  {path: 'album-photos', component: AlbumPhotosComponent},
+  {path: '', redirectTo:'home', pathMatch: 'full'},
+  {path: '**', component: NotFoundComponent}
+
 ];
 
 @NgModule({

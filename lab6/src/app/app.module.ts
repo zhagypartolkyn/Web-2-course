@@ -1,24 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductItemComponent } from './product-item/product-item.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { CategoryComponent } from './category/category.component';
-import { NavigationComponent } from './navigation/navigation.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { AlbumDetailComponent } from './album-detail/album-detail.component';
+import { AlbumPhotosComponent } from './album-photos/album-photos.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductItemComponent,
-    ProductListComponent,
-    TopBarComponent,
-    ProductAlertsComponent,
-    CategoryComponent,
-    NavigationComponent,
+    HomeComponent,
+    AboutComponent,
+    AlbumsComponent,
+    AlbumDetailComponent,
+    AlbumPhotosComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

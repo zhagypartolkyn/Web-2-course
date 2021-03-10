@@ -1,10 +1,14 @@
-<app-top-bar></app-top-bar>
-<div>
-  <div class="side">
-    <app-navigation></app-navigation>
-  </div>
-</div>
-<div class="container">
-  <router-outlet>
-  </router-outlet>
-</div>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/Home">Home</a>
+    </li>
+    <li>
+      <a routerLink="/About">About</a>
+    </li>
+    <li>
+      <a routerLink="/Albums">Albums</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
