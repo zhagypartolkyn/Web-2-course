@@ -17,6 +17,15 @@ def company_vacancy(request, id):
     vacancies = [vac.to_json() for vac in company.vacancies.all()]
     return JsonResponse(vacancies, safe=False)
 
+def vacancies(request):
+    vacancies = Vacancy.objects.all()   
+    vacancies_json = [vacancy.to_json() for vacancy in vacancies]
+    return JsonResponse(vacancies_json, safe=False)
+
+def vacancy(request, id):
+    vacancy = Vacancy.objects.get(id = id)   
+    return JsonResponse(vacancy.to_json(), safe=False)
+
 def top_ten(request):
     vacancies = Vacancy.objects.all().order_by('-salary')[:10]
     vacancies_json = [vacancy.to_json() for vacancy in vacancies]
